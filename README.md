@@ -27,6 +27,7 @@ Asegúrate de tener instalados los siguientes programas:
 - [Visual Stdio Code] https://visualstudio.microsoft.com/es/
 o cualquier editor de codigo
 -Importar el script de la base de datos que se encuentra en el proyecto para su funcionamiento correcto
+-Para iniciarlo de manera local dirigete a (http://localhost/escolares/php/index.html)
 ### Clonar el repositorio
 -Para poder usar el sistema localmente puesdes descargar el formato zip y clonarlo desde la terminal
 ```bash
