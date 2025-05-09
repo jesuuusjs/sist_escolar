@@ -1,0 +1,72 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #003d73; /* Azul UNAM */
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .form-container label {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #003d73; /* Azul UNAM */
+        }
+
+        .form-container select,
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #003d73; /* Azul UNAM */
+            font-size: 1em;
+        }
+
+        .form-container select:focus,
+        .form-container input[type="text"]:focus {
+            border-color: #f2b400; /* Dorado UNAM */
+            outline: none;
+        }
+
+        .form-container button {
+            background-color: #003d73; /* Azul UNAM */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-container button:hover {
+            background-color: #f2b400; /* Dorado UNAM */
+        }
+
+        .mensaje {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .mensaje.success {
+            color: green;
+        }
+
+        .mensaje.error {
+            color: red;
+        }

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FESC UNAM - Inicio Sesion</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../images/logo-FESC.ico" type="image/webp">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .golden-icon {
+            color: #d4af37;
+        }
+        .golden-bg {
+            background-color: #d4af37;
+            color: white;
+        }
+        .btn-golden {
+            background-color: #d4af37;
+            color: white;
+            font-weight: bold;
+        }
+        .btn-golden:hover {
+            background-color: #b8962a;
+            color: white;
+        }
+        .forgot-link {
+            color: #0a3d6d;
+            text-decoration: none;
+        }
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+        .login-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #0a3d6d;
+            color: white;
+            border-radius: 10px 10px 0 0 !important;
+        }
+    </style>
+</head>
+<body class="fesc-bg">
+    <div class="container-fluid">
+        <!-- Encabezado -->
+        <header class="fesc-header py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <img src="../images/logo.webp" alt="FESC UNAM" class="fesc-logo">
+                    </div>
+                    <div class="col">
+                        <h1 class="fesc-title">Facultad de Estudios Superiores Cuautitlán</h1>
+                        <h2 class="fesc-subtitle">Universidad Nacional Autónoma de México</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido principal -->
+        <main class="fesc-main">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 col-md-8">
+                        <div class="login-card">
+                            <div class="card-header text-center">
+                                <i class="fas fa-user-lock golden-icon mb-2"></i>
+                                <h3>Acceso al Sistema</h3>
+                            </div>
+                            <div class="card-body">
+                                <form id="loginForm" action="login.php" method="POST">
+                                    <div class="mb-4">
+                                        <label for="username" class="form-label">Número de cuenta</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text golden-bg">
+                                                <i class="fas fa-id-card"></i>
+                                            </span>
+                                            <input type="text" class="form-control" id="numcuenta" name="numcuenta" 
+                                            placeholder="Ingrese su número UNAM" 
+                                            maxlength="9" 
+                                            required>
+
+                                        </div>
+                                        <div class="form-text">Máximo 9 caracteres</div>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="password" class="form-label">Contraseña</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text golden-bg">
+                                                <i class="fas fa-key"></i>
+                                            </span>
+                                            <input type="password" class="form-control" id="password" name="password" 
+                                            placeholder="Ingrese su clave de acceso" 
+                                            maxlength="250" 
+                                            required>
+                                            <button class="btn btn-outline-secondary toggle-password" 
+                                                    type="button">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        <div class="form-text">Máximo 250 caracteres</div>
+                                    </div>
+                                    
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="remember">
+                                        <label class="form-check-label" for="remember">Recordar mis datos</label>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-golden w-100 py-3 mb-3">
+                                        <i class="fas fa-sign-in-alt me-2"></i> INGRESAR
+                                    </button>
+                                    
+                                    
+                                    <div class="text-center">
+                                        <a href="recuperar_contraseña.html" class="forgot-link">¿Olvidó su contraseña?</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="fesc-footer py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">A Teoloyucan Manzana 001, San Sebastian Xhala, 54840 Cuautitlán Izcalli, Méx.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="mb-0">© 2025 FESC UNAM - Todos los derechos reservados</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- Script personalizado -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos del DOM
+            const togglePassword = document.querySelector('.toggle-password');
+            const passwordInput = document.getElementById('password');
+            const rememberCheckbox = document.getElementById('remember');
+            const usernameInput = document.getElementById('numcuenta');
+            const loginForm = document.getElementById('loginForm');
+        
+            // Función para mostrar/ocultar contraseña
+            function togglePasswordVisibility() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+        
+                // Cambiar icono
+                const icon = togglePassword.querySelector('i');
+                icon.classList.toggle('fa-eye');
+                icon.classList.toggle('fa-eye-slash');
+            }
+        
+            // Función para cargar credenciales guardadas
+            function loadSavedCredentials() {
+                const savedCredentials = localStorage.getItem('fescCredentials');
+                if (savedCredentials) {
+                    const credentials = JSON.parse(savedCredentials);
+                    usernameInput.value = credentials.username || '';
+                    passwordInput.value = credentials.password || '';
+                    rememberCheckbox.checked = true;
+                    
+                    // Mostrar notificación de credenciales cargadas
+                    Swal.fire({
+                        title: 'Credenciales cargadas',
+                        text: 'Hemos cargado tus credenciales guardadas',
+                        icon: 'info',
+                        confirmButtonColor: '#0a3d6d',
+                        timer: 2000,
+                        timerProgressBar: true
+                    });
+                }
+            }
+        
+            // Función para guardar credenciales
+            function saveCredentials() {
+                if (rememberCheckbox.checked) {
+                    const credentials = {
+                        username: usernameInput.value,
+                        password: passwordInput.value
+                    };
+                    localStorage.setItem('fescCredentials', JSON.stringify(credentials));
+                } else {
+                    localStorage.removeItem('fescCredentials');
+                }
+            }
+        
+            // Función para enviar el formulario por AJAX
+            async function submitLoginForm() {
+                // Validar número de cuenta
+                const numCuenta = usernameInput.value.trim();
+                if (numCuenta.length === 0 || numCuenta.length > 9) {
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'El número de cuenta debe tener máximo 9 caracteres',
+                        icon: 'error',
+                        confirmButtonColor: '#0a3d6d',
+                        confirmButtonText: 'Entendido'
+                    });
+                    return false;
+                }
+                
+                // Validar contraseña
+                const password = passwordInput.value;
+                if (password.length === 0) {
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'Por favor ingresa tu contraseña',
+                        icon: 'error',
+                        confirmButtonColor: '#0a3d6d',
+                        confirmButtonText: 'Entendido'
+                    });
+                    return false;
+                }
+                
+                // Mostrar loading
+                const swalLoading = Swal.fire({
+                    title: 'Validando credenciales',
+                    html: 'Por favor espera...',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    }
+                });
+                
+                try {
+                    // Guardar credenciales si está marcado el checkbox
+                    saveCredentials();
+                    
+                    // Enviar datos por AJAX
+                    const formData = new FormData(loginForm);
+                    const response = await fetch('login.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    // Cerrar loading
+                    await swalLoading.close();
+                    
+                    if (!response.ok) throw new Error('Error en la respuesta del servidor');
+                    
+                    const data = await response.json();
+                    
+                    if (data.status === 'success') {
+                        // Mostrar mensaje de éxito y redirigir
+                        await Swal.fire({
+                            title: data.message,
+                            text: 'Bienvenido ' + (data.nombre || ''),
+                            icon: 'success',
+                            confirmButtonColor: '#0a3d6d',
+                            timer: 2000,
+                            timerProgressBar: true
+                        });
+                        
+                        // Redirección
+                        window.location.href = data.redirect;
+                    } else {
+                        // Mostrar error del servidor
+                        await Swal.fire({
+                            title: data.message || 'Error',
+                            text: data.detail || 'Ocurrió un error al iniciar sesión',
+                            icon: 'error',
+                            confirmButtonColor: '#0a3d6d',
+                            confirmButtonText: 'Entendido'
+                        });
+                    }
+                } catch (error) {
+                    await swalLoading.close();
+                    await Swal.fire({
+                        title: 'Error de conexión',
+                        text: 'No se pudo conectar con el servidor. Por favor intenta nuevamente.',
+                        icon: 'error',
+                        confirmButtonColor: '#0a3d6d',
+                        confirmButtonText: 'Entendido'
+                    });
+                    console.error('Error:', error);
+                }
+            }
+        
+            // Evento submit del formulario
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitLoginForm();
+            });
+        
+            // Evento para mostrar/ocultar contraseña
+            togglePassword.addEventListener('click', togglePasswordVisibility);
+        
+            // Cargar credenciales al iniciar
+            loadSavedCredentials();
+            
+            // Mostrar mensaje de bienvenida
+            const isFirstVisit = !localStorage.getItem('fescFirstVisit');
+            if (isFirstVisit) {
+                Swal.fire({
+                    title: 'Bienvenido al Sistema FESC',
+                    text: 'Por favor inicia sesión con tu cuenta UNAM',
+                    icon: 'info',
+                    confirmButtonColor: '#0a3d6d',
+                    confirmButtonText: 'OK'
+                });
+                localStorage.setItem('fescFirstVisit', 'true');
+            }
+        });
+    </script>
+</body>
+</html>

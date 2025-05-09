@@ -1,0 +1,72 @@
+.admin-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.admin-card .card-body {
+    padding: 2rem 1.5rem;
+}
+
+.admin-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--unam-gold);
+}
+
+.admin-card-header {
+    background-color: var(--unam-blue);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.welcome-admin {
+    background-color: var(--unam-dark-blue);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--unam-gold);
+}
+
+.logout-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+.real-time-clock {
+    font-size: 1.2rem;
+    font-family: 'Courier New', monospace;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.account-number {
+    color: var(--unam-gold);
+    font-weight: bold;
+}
+
+.last-access {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}

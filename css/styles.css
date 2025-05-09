@@ -1,0 +1,180 @@
+/* Colores institucionales */
+:root {
+    --unam-blue: #042d6e;
+    --unam-dark-blue: #031a3d;
+    --unam-gold: #d4af37;
+    --unam-gold-hover: #b8860b;
+    --unam-gold-light: #f5e6ab;
+    --fesc-green: #006341;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.fesc-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
+                url('../assets/bg-fesc.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Encabezado */
+.fesc-header {
+    background-color: var(--unam-blue);
+    color: white;
+    border-bottom: 3px solid var(--unam-gold);
+}
+
+.fesc-logo {
+    height: 70px;
+    width: auto;
+}
+
+.fesc-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    color: white;
+}
+
+.fesc-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--unam-gold-light);
+}
+
+/* Contenido principal */
+.fesc-main {
+    flex: 1;
+    padding: 3rem 0;
+}
+
+.login-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: var(--unam-blue);
+    color: white;
+    padding: 1.5rem;
+    border-bottom: 4px solid var(--unam-gold);
+}
+
+.card-header h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.card-header .golden-icon {
+    font-size: 2rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Iconos dorados */
+.golden-bg {
+    background-color: var(--unam-gold-light);
+    color: var(--unam-gold);
+    border-color: #dee2e6;
+}
+
+/* Botón dorado */
+.btn-golden {
+    background-color: var(--unam-gold);
+    color: var(--unam-blue);
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn-golden:hover {
+    background-color: var(--unam-gold-hover);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-golden:active {
+    background-color: var(--unam-blue) !important;
+    color: white !important;
+}
+
+/* Mostrar/ocultar contraseña */
+.toggle-password {
+    border-color: #dee2e6;
+    color: var(--unam-gold);
+}
+
+.toggle-password:hover {
+    background-color: var(--unam-gold-light);
+    color: var(--unam-gold-hover);
+}
+
+/* Enlace olvidó contraseña */
+.forgot-link {
+    color: var(--unam-blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-link:hover {
+    color: var(--unam-dark-blue);
+    text-decoration: underline;
+}
+
+/* Pie de página */
+.fesc-footer {
+    background-color: var(--unam-blue);
+    color: white;
+    font-size: 0.85rem;
+    border-top: 3px solid var(--unam-gold);
+}
+
+/* Validación de formulario */
+.was-validated .form-control:valid,
+.form-control.is-valid {
+    border-color: #198754;
+    background-image: none;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    border-color: #dc3545;
+    background-image: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fesc-title {
+        font-size: 1.1rem;
+    }
+    
+    .fesc-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .fesc-logo {
+        height: 60px;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-card {
+        box-shadow: none;
+        border: 1px solid #dee2e6;
+    }
+}
